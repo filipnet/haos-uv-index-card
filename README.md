@@ -4,7 +4,7 @@
 
 # Home Assistant UV Index
 
-<img src="images/card_examples.png" alt="Card examples" width="250" align="right" hspace="30" vspace="20"/>
+<img src="images/card_examples.png" alt="Card examples" width="270" align="right" hspace="30" vspace="20"/>
 HAOS UV Index is a professional Lovelace UI card for Home Assistant that displays the real-time UV Index based on data from sensor.outdoor_uv_index. The card provides color-coded risk levels and protection recommendations according to WHO guidelines. It uses Mushroom Cards for a modern and clean design, making it easy to assess UV exposure at a glance.
 
 - [Home Assistant UV Index](#home-assistant-uv-index)
