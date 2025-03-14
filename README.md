@@ -48,3 +48,11 @@ layout: vertical
 multiline_secondary: true
 fill_container: true
 ```
+
+## Contribution
+
+Contributions to enhance this project are welcome! If you have suggestions, improvements, or bug fixes, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the terms of the BSD 3-Clause License. See the [LICENSE](LICENSE) file for more details.
