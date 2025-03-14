@@ -1,3 +1,7 @@
+![Home Assistant Compatibility](https://img.shields.io/badge/Home%20Assistant-Compatible-brightgreen)
+![HACS](https://img.shields.io/badge/HACS-Required-blue)
+![Mushroom Cards](https://img.shields.io/badge/Mushroom_Cards-Required-blue)
+
 # Home Assistant UV Index Card
 
 HAOS UV Index Card is a professional Lovelace UI card for Home Assistant that displays the real-time UV Index based on data from sensor.outdoor_uv_index. The card provides color-coded risk levels and protection recommendations according to WHO guidelines. It uses Mushroom Cards for a modern and clean design, making it easy to assess UV exposure at a glance.
@@ -48,6 +52,12 @@ layout: vertical
 multiline_secondary: true
 fill_container: true
 ```
+## WHO UV Protection Guidelines
+
+The World Health Organization (WHO) has published comprehensive guidelines for protection against UV radiation. These guidelines include measures that vary depending on the UV index, helping to minimize the risks of skin damage and sunburn.
+
+For more information and detailed recommendations, refer to the official WHO guidelines:
+[WHO UV Protection Guidelines](https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index)
 
 ## Contribution
 
