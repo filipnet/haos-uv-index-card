@@ -72,6 +72,16 @@ The World Health Organization (WHO) has published comprehensive guidelines for p
 For more information and detailed recommendations, refer to the official WHO guidelines:
 [WHO UV Protection Guidelines](https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index)
 
+## Notification Automation
+
+Optionally, you can enable notifications to receive alerts when the UV Index reaches certain thresholds. An example automation file, `automation-notification.yml`, is provided in the root of this repository. This automation can be imported into Home Assistant and customized to send notifications (e.g., to your mobile device) when the UV Index becomes high or extreme.
+
+**How to use:**
+1. Copy `automation-notification.yml` to your Home Assistant configuration directory.
+2. In Home Assistant, go to **Settings → Automations & Scenes → Automations**.
+3. Click **⋮ → Import Blueprint** and select the `automation-notification.yml` file.
+4. Adjust the notification targets and thresholds as needed.
+
 ## Contribution
 
 Contributions to enhance this project are welcome! If you have suggestions, improvements, or bug fixes, please open an issue or submit a pull request.

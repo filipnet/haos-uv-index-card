@@ -1,0 +1,65 @@
+alias: UV Index Notification
+description: Send a notification when the UV index reaches a certain level.
+triggers:
+  - entity_id:
+      - sensor.outdoor_uv_index
+    above: 3
+    trigger: numeric_state
+actions:
+  - choose:
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.outdoor_uv_index
+            above: 3
+            below: 7
+        sequence:
+          - data:
+              title: 🟡 UV Index Moderate ({{ states('sensor.outdoor_uv_index') }})
+              message: Stay in shade, use SPF 30.
+              data:
+                color: yellow
+                importance: high
+                notification_icon: mdi:white-balance-sunny
+            action: notify.family_devices
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.outdoor_uv_index
+            above: 6
+            below: 9
+        sequence:
+          - data:
+              title: 🟠 UV Index High ({{ states('sensor.outdoor_uv_index') }})
+              message: Use SPF 30+, wear a hat and sunglasses.
+              data:
+                color: orange
+                importance: high
+                notification_icon: mdi:white-balance-sunny
+            action: notify.family_devices
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.outdoor_uv_index
+            above: 8
+            below: 11
+        sequence:
+          - data:
+              title: 🔴 UV Index Very High ({{ states('sensor.outdoor_uv_index') }})
+              message: Use SPF 50+, wear protective clothing.
+              data:
+                color: red
+                importance: high
+                notification_icon: mdi:white-balance-sunny
+            action: notify.family_devices
+      - conditions:
+          - condition: numeric_state
+            entity_id: sensor.outdoor_uv_index
+            above: 10
+        sequence:
+          - data:
+              title: 🟣 UV Index Extreme ({{ states('sensor.outdoor_uv_index') }})
+              message: Avoid sun exposure, use SPF 50+.
+              data:
+                color: purple
+                importance: high
+                notification_icon: mdi:white-balance-sunny
+            action: notify.family_devices
+mode: restart
